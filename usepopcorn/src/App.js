@@ -110,7 +110,6 @@ function Search({ query, setQuery }) {
     setQuery("");
   });
 
-
   return (
     <input
       className="search"
