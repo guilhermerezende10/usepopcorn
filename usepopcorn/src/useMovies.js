@@ -8,7 +8,6 @@ export function useMovies(query) {
   const [error, setError] = useState("");
   useEffect(
     function () {
-
       const controller = new AbortController();
 
       async function fetchMovies() {
@@ -16,7 +15,7 @@ export function useMovies(query) {
           setIsLoading(true);
           setError("");
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             { signal: controller.signal }
           );
 
